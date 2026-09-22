@@ -1,5 +1,5 @@
-import BookCard from "../BookCard";
-import { IBook } from "../Types/books.types";
+import BookCard from "@/Components/Common/BookCard";
+import { IBook } from "@/Components/Common/Types/books.types";
 
 
 
@@ -39,7 +39,7 @@ const Books = async () => {
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {booksData.slice(0,6).map((book:IBook) => (
+        {booksData.map((book:IBook) => (
           <BookCard key={book.bookId} book={book} />
         ))}
       </div>
